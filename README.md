@@ -7,14 +7,13 @@ Spiking Google Cloud Functions with ClojureScript.
 Build and deploy:
 
 ```bash
-lein prod
-gcloud functions deploy helloworld --region=europe-west1 --runtime nodejs8 --trigger-http --source target
+./build-and-deploy.sh
 ```
 
 Invoke:
 
 ```bash
-http https://europe-west1-jarppe.cloudfunctions.net/helloworld name=Jarppe
+http post https://europe-west1-jarppe.cloudfunctions.net/helloworld/ name=Jarppe
 ```
 
 ## License
